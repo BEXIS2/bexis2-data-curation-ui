@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/components/form/+layout.svelte";
+export { default as component } from "../../../../src/routes/CuratorNote/+page.svelte";

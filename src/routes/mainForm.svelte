@@ -1,20 +1,24 @@
-<!-- MyForm.svelte -->
-<script lang="ts">
-    export let inputValue: string = '';
 
-    function handleSubmit(event: Event) {
-        event.preventDefault();
-        console.log('Form submitted with value:', inputValue);
-    }
-</script>
 
-<form class="form" on:submit={handleSubmit}>
-    <label class="label">
-        <span>Input 1</span>
-        <input class="input" type="text" placeholder="Input 1" bind:value={inputValue} />
-    </label>
+<label class="label">
+	<span>Input</span>
 
-    <!-- Weitere Formularfelder hier -->
-
-    <button type="submit" class="btn variant-filled">Submit</button>
-</form>
+	<input class="input" type="text" placeholder="Input" />
+</label>
+				
+<label class="label">
+	<span>Select</span>
+	<select class="select">
+		<option value="1">Option 1</option>
+		<option value="2">Option 2</option>
+		<option value="3">Option 3</option>
+		<option value="4">Option 4</option>
+		<option value="5">Option 5</option>
+	</select>
+</label>
+				
+<label class="label">
+	<span>Textarea</span>
+	<textarea class="textarea" rows="4" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
+</label>
+				

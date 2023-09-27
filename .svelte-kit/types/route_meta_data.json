@@ -1,3 +1,9 @@
 {
-	"/": []
+	"/": [],
+	"/CuratorNote": [],
+	"/Curator": [],
+	"/Entry": [],
+	"/UserNote": [],
+	"/User": [],
+	"/about": []
 }
