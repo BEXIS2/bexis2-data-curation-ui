@@ -1,6 +1,8 @@
 
-
 <script>
+   
+
+
     // Define a long text content to be displayed on the About page
     let longText = `
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel odio ac eros rhoncus egestas. Nullam nec fermentum libero. Duis lacinia, tortor at pellentesque efficitur, lorem lorem convallis velit, in consectetur nunc odio nec libero. Vestibulum in tincidunt urna. Nullam tincidunt, orci a vulputate iaculis, nulla metus tincidunt nisi, non luctus sapien leo a elit. Fusce vestibulum euismod est, ut posuere elit posuere et. Nunc condimentum quam in tellus scelerisque, in vehicula libero vehicula. Integer vitae gravida odio. Quisque sit amet lacinia lectus. Sed tincidunt feugiat metus, sit amet sodales sapien varius eu. Sed eu libero nec arcu convallis blandit vel id ex. Donec sit amet convallis arcu. Quisque id vehicula neque. Donec tincidunt quam nec turpis blandit varius. Fusce non efficitur massa, id semper odio. Integer ut bibendum turpis. Sed vel nunc at libero interdum pharetra.
