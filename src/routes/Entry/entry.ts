@@ -1,21 +1,8 @@
-// entry.ts
-
-export interface EntryType {
-   id: number;
-   name: string;
-   color: string;
- }
- 
- export function saveText(value: string, entry: EntryType) {
-   const text = value;
+export function saveText(key: string, value: string) {
    const json = {
-     text: text,
+     text: value,
    };
  
-   // Write the text to the JSON file in Local Storage
-   localStorage.setItem('entry.json', JSON.stringify(json));
- 
-   // Also save the text in Local Storage
-   localStorage.setItem('savedText', JSON.stringify(entry));
+   // Write the text to the JSON file in Local Storage with the specified key
+   localStorage.setItem(key, JSON.stringify(json));
  }
- 

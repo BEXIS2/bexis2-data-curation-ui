@@ -1,28 +1,70 @@
 
-
+<!-- App.svelte -->
 <script lang="ts">
-   import type { EntryType } from './entry'; // Use type-only import for EntryType
+   import { onMount } from 'svelte';
    import { saveText } from './entry';
  
-   let value = '';
-   let entry: EntryType = { id: 1, name: 'skfmsldkf', color: 'blau' };
+   let title = '';
+   let content = '';
  
-   // Function to save the text
-   function handleSave() {
-     saveText(value, entry);
+   // Function to save the text with a key
+   function handleSaveTitle() {
+     saveText('title', title); // Here, 'title' is the key for the title
    }
+ 
+   function handleSaveContent() {
+     saveText('content', content); // Here, 'content' is the key for the content
+   }
+ 
+   // Function to download the JSON file
+   function downloadJson() {
+     const data = JSON.stringify({ title, content }, null, 2); // Convert title and content to JSON
+     const blob = new Blob([data], { type: 'application/json' });
+     const url = URL.createObjectURL(blob);
+ 
+     const a = document.createElement('a');
+     a.href = url;
+     a.download = 'entry.json'; // Specify the filename
+     a.click();
+ 
+     // Clean up
+     URL.revokeObjectURL(url);
+   }
+ 
+   // Load the saved text from local storage on component mount
+   onMount(() => {
+     const savedTitle = localStorage.getItem('title');
+     if (savedTitle) {
+       title = JSON.parse(savedTitle).text;
+     }
+ 
+     const savedContent = localStorage.getItem('content');
+     if (savedContent) {
+       content = JSON.parse(savedContent).text;
+     }
+   });
  </script>
-   
-   <form>
-     <div class="container">
-       <input style="color: black;" id="message" name="message" placeholder="Message" bind:value="{entry.name}">
-       {value}
-       <button type="button" id="save-button" on:click={handleSave}>
-         <span>Save</span>
-       </button>
-     </div>
-   </form>
-   
+ 
+ <form>
+   <div class="container">
+     <input style="color: black;" id="title" name="title" placeholder="Title" bind:value="{title}">
+     {title}
+     <button type="button" id="save-title-button" on:click={handleSaveTitle}>
+       <span>Save Title</span>
+     </button>
+ 
+     <textarea style="color: black;" id="content" name="content" placeholder="Content" bind:value="{content}"></textarea>
+     {content}
+     <button type="button" id="save-content-button" on:click={handleSaveContent}>
+       <span>Save Content</span>
+     </button>
+ 
+     <button type="button" id="download-button" on:click={downloadJson}>
+       <span>Download JSON</span>
+     </button>
+   </div>
+ </form>
+
 <style>
    :global(.container) {
       max-width: 800px;
