@@ -1,6 +1,6 @@
-<!-- MessageBubble.svelte -->
+
 <script lang="ts">
-    import Avatar from './Avatar.svelte'; // Importiere die Avatar-Komponente
+    import Avatar from './Avatar.svelte'; 
     export let bubble: any;
   </script>
   

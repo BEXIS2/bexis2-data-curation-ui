@@ -1,4 +1,4 @@
-<!-- App.svelte -->
+
 <script>
     import { onMount } from "svelte";
     import MessageBubble from "./MessageBubble.svelte";
@@ -42,16 +42,15 @@
     <section class="bg-surface-500/30 p-4 overflow-y-auto">
       {#each messages as message (message.id)}
         <MessageBubble bubble={message} />
-        <div class="my-4"></div> <!-- Hier wird der Abstand zwischen den Nachrichten eingefügt -->
+        <div class="my-4"></div> 
       {/each}
     </section>
   
     <div class="bg-surface-500/30 p-4">
-      <div class="input-group input-group-divider grid-cols-[auto_1fr_auto] rounded-container-token">
-        <button class="input-group-shim">+</button>
-        <textarea bind:value={currentMessage} name="prompt" placeholder="Write a message..."></textarea>
-        <button class="variant-filled-primary" on:click={addMessage}>Send</button>
+        <div class="input-group input-group-divider grid-cols-[auto_1fr_auto] rounded-container-token">
+          <button class="input-group-shim">+</button>
+          <textarea bind:value={currentMessage} name="prompt" placeholder="Write a message..." class="text-black"></textarea>
+          <button class="variant-filled-primary" on:click={addMessage}>Send</button>
+        </div>
       </div>
     </div>
-  </div>
-  

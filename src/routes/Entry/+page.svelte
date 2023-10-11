@@ -1,5 +1,5 @@
 
-<!-- App.svelte -->
+
 <script lang="ts">
    import { onMount } from 'svelte';
    import { saveText } from './entry';
