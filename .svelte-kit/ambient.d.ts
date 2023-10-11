@@ -28,8 +28,8 @@
 declare module '$env/static/private' {
 	export const NODE: string;
 	export const INIT_CWD: string;
-	export const TERM: string;
 	export const SHELL: string;
+	export const TERM: string;
 	export const npm_config_metrics_registry: string;
 	export const npm_config_global_prefix: string;
 	export const COLOR: string;
@@ -98,8 +98,8 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		NODE: string;
 		INIT_CWD: string;
-		TERM: string;
 		SHELL: string;
+		TERM: string;
 		npm_config_metrics_registry: string;
 		npm_config_global_prefix: string;
 		COLOR: string;
