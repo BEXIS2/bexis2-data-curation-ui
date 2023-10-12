@@ -37,7 +37,8 @@
 		<li><a href="/about">About</a></li>
 		<li><a href="/Entry">Entry</a></li>
 		<li><a href="/Curator">Curator</a></li>
-		
+		<li><a href="/User">User</a></li>
+
 	  </ul>
 	</nav>
   </header>
