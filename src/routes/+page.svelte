@@ -1,24 +1,14 @@
 <script>
-
-    import MainForm from "./mainForm.svelte";
-
+    import MainForm from "./mainForm.svelte"; // Import the MainForm component
 </script>
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+
 <div class="container h-full mx-auto flex justify-center items-center">
     <div class="space-y-5">
-        <h1 class="h1 p-4">Tito Testet</h1>
+        <h1 class="h1 p-4">Tito Testet</h1> <!-- Display a title "Tito Testet" with styling -->
 
         <ul>
-            <!-- Haupt-Svelte-Datei -->
-          
-            
             <li>
-              <MainForm />
-               
-              
-
-
-
+                <MainForm /> <!-- Render the MainForm component -->
             </li>
         </ul>
     </div>
