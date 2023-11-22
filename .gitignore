@@ -4,3 +4,5 @@ Ignoriere alle Dateien mit der Erweiterung .log
 # Ignoriere das Verzeichnis "node_modules"
 node_modules/
 
+# Ignoriere das Verzeichnis ".DS_Store"
+.DS_Store/
