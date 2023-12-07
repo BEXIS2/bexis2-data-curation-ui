@@ -39,6 +39,7 @@
 		<!--<li><a href="/Curator">Curator</a></li>
 		<li><a href="/User">User</a></li>-->
 		<li><a href="/Chat_Pages">Chat</a></li>
+		<li><a href="/CreateEntry">Create Entry</a></li>
 
 	  </ul>
 	</nav>
